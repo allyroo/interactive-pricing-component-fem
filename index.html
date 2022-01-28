@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon-32x32.png" />
+    <title>Interactive Pricing Component</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <header class="wrapper__top">
+        <h1 class="wrapper__top--title">Simple, traffic-based pricing</h1>
+        <h4 class="wrapper__top--subtitle">
+          Sign-up for our 30-day trial. No credit card required.
+        </h4>
+      </header>
+      <article class="wrapper__bottom">
+        <section class="card">
+          <header class="card__header">
+            <div class="card__header-pageviews"></div>
+            <div class="card__header-price"></div>
+          </header>
+          <div class="card__slider-container">
+            <div class="slider">
+              <img src="/src/images/icon-slider.svg" alt="" class="src" />
+            </div>
+          </div>
+          <div class="card__toggle">
+            <p>Monthly Billing</p>
+            <p>Yearly Billing</p>
+          </div>
+          <tr></tr>
+          <footer class="card__footer">
+            <div class="card__footer--left">
+              <div class="check">
+                <p>
+                  <img
+                    src="/src/images/icon-check.svg"
+                    alt=""
+                    class="src"
+                  />Unlimited websites
+                </p>
+              </div>
+              <div class="check">
+                <p></p>
+                  <img
+                    src="/src/images/icon-check.svg"
+                    alt=""
+                    class="src"
+                  />100% data ownership
+                </p>
+              </div>
+              <div class="check">
+                
+                <p><img src="/src/images/icon-check.svg" alt="" class="src" />Email reports</p>
+              </div>
+            </div>
+            <div class="card__footer--right">
+              <button class="button">Start my trial</button>
+            </div>
+          </footer>
+        </section>
+      </article>
+    </main>
+  </body>
+  <script src="/index.js"></script>
+</html>
