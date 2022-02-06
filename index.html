@@ -12,44 +12,61 @@
     <main class="wrapper">
       <header class="wrapper__top">
         <h1 class="wrapper__top--title">Simple, traffic-based pricing</h1>
-        <h4 class="wrapper__top--subtitle">
-          Sign-up for our 30-day trial. No credit card required.
-        </h4>
+        <div class="wrapper__top--subtitle">
+        <div class="wrapper__top--sub">
+          Sign-up for our 30-day trial. &nbsp;
+        </div>
+        <div class="wrapper__top--sub">
+           No credit card required.
+        </div>
+      </div>
       </header>
       <article class="wrapper__bottom">
         <section class="card">
           <header class="card__header">
-            <div class="card__header-pageviews"></div>
-            <div class="card__header-price"></div>
-          </header>
-          <div class="card__slider-container">
-            <div class="slidecontainer">
-              <input type="range" min="0" max="4" value="2" class="slider" id="priceSlider">
-              <p>$<span id="valueOutput"></span>.00/ month</p>
+            <div class="card__header-pageviews">
               <p><span id="pageViewsOutput"></span> PAGEVIEWS</p>
+            </div>
+            <!-- Range Slider -->
+            <div class="card__slider-container">
+            <div class="range-slider-bar">
+
+              <input type="range" min="0" max="4" value="2" class="slider" id="priceSlider">
+            <div class="card__header-price">
+              <div class="value">
+              <span>$<span id="valueOutput"></span>.00</span> 
+              </div>
+              <span class="month">/ month</span>
+            </div>
+              
+              
 
             </div>
-            <div class="slider">
-              <img src="/src/images/icon-slider.svg" alt="" class="src" />
-            </div>
+          </header>
           </div>
           <div class="card__toggle">
-            <p>Monthly Billing<label class="switch">
+            <span class="billing">Monthly Billing</span><label class="switch">
               <input type="checkbox" id="toggle">
               <span class="toggle round"></span>
-            </label> Yearly Billing</p>
+            </label>
+            <span class="billing">Yearly Billing</span> 
+            <span class="discount">-25%</span>
+            
             
           </div>
-          <tr></tr>
+       <div>
+         <hr class="hr">
+       </div>
+          
           <footer class="card__footer">
-            <div class="card__footer--left">
+            <div class="card__footer--text">
               <div class="check">
                 <p>
                   <img
                     src="/src/images/icon-check.svg"
                     alt=""
                     class="src"
-                  />Unlimited websites
+                  /> &nbsp; &nbsp; Unlimited websites 
                 </p>
               </div>
               <div class="check">
@@ -58,15 +75,15 @@
                     src="/src/images/icon-check.svg"
                     alt=""
                     class="src"
-                  />100% data ownership
+                  /> &nbsp; &nbsp; 100% data ownership
                 </p>
               </div>
               <div class="check">
                 
-                <p><img src="/src/images/icon-check.svg" alt="" class="src" />Email reports</p>
+                <p><img src="/src/images/icon-check.svg" alt="" class="src" /> &nbsp; &nbsp; Email reports</p>
               </div>
             </div>
-            <div class="card__footer--right">
+            <div class="card__footer--button">
               <button class="button">Start my trial</button>
             </div>
           </footer>
