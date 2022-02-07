@@ -24,10 +24,9 @@ html {
 }
 
 body {
-  position: relative;
+  position: center;
   background-color: var(--white);
   background-image: url("/src/images/bg-pattern.svg");
-  background-position: top left;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -42,6 +41,9 @@ body {
   margin-top: 6rem;
 }
 .wrapper__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 4rem;
   background-size: 12rem;
   background-image: url("https://digitshack.com/codepen/mentor5/pattern-circles.svg");
@@ -51,26 +53,32 @@ body {
 
 .wrapper__top--title {
   color: var(--dark-blue);
+  font-size: 2rem;
 }
 
 .wrapper__top--subtitle {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   font-weight: lighter;
   font-size: 17px;
   color: var(--gray-blue);
 }
 
+.wrapper__top--sub {
+  white-space: nowrap;
+}
+
 .wrapper__bottom {
   display: flex;
   justify-content: center;
-  margin: 1rem 1rem 0 1rem;
+  /* margin: 1rem 1rem 0 1rem; */
 }
 .card {
   background: white;
   border-radius: 10px;
   height: 40rem;
-  width: 100%;
+  width: 35rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -104,7 +112,7 @@ body {
   background-color: var(--light-grayish-red);
   font-size: 13px;
   padding: 3px 6px;
-  width:55px;
+  width: 55px;
   border-radius: 30px;
 }
 
@@ -163,9 +171,8 @@ body {
   height: 0;
 }
 
-
 .card__toggle {
-  padding-bottom:3rem;
+  padding-bottom: 3rem;
 }
 
 /* toggle switch */
@@ -197,7 +204,6 @@ input:checked + .toggle {
   background-color: var(--soft-cyan);
 }
 
-
 input:checked + .toggle:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -217,27 +223,24 @@ input:checked + .toggle:before {
   padding: 0.5rem;
 }
 
-
 .hr {
-  width:80%;
-  display:block;
-  margin:auto;
-  border-top:var(--gray-blue);
-  
+  width: 80%;
+  display: block;
+  margin: auto;
+  border-top: var(--gray-blue);
 }
 
 .card__footer {
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
 .check {
-  color:var(--gray-blue);
+  color: var(--gray-blue);
 }
 
 .card__footer--button {
-  padding:1.5rem;
+  padding: 1.5rem;
 }
-
 
 .button {
   background-color: var(--dark-blue);
@@ -245,8 +248,29 @@ input:checked + .toggle:before {
   color: var(--pale-blue);
   padding: 15px 65px;
   text-align: center;
-  border-radius:30px;
+  border-radius: 30px;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    width: 50rem;
+  }
+
+  .wrapper__bottom {
+    grid-template-areas:
+      "card__header-pageviews card__header-price"
+      "card__slider-container card__slider-container";
+  }
+  .wrapper__bottom > card__header-pageviews {
+    grid-area: "card__header-pageviews";
+  }
+  .wrapper__bottom > card__header-price {
+    grid-area: "card__header-price";
+  }
+  .wrapper__bottom > card__slider-container {
+    grid-area: "card__slider-container";
+  }
 }
