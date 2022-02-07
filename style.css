@@ -16,6 +16,7 @@
 
 html {
   box-sizing: border-box;
+  
 }
 *,
 *:before,
@@ -27,6 +28,7 @@ body {
   position: center;
   background-color: var(--white);
   background-image: url("/src/images/bg-pattern.svg");
+  background-size:auto;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -254,24 +256,108 @@ input:checked + .toggle:before {
   cursor: pointer;
 }
 
+.button:hover {
+  color: white;
+}
+
 @media only screen and (min-width: 1000px) {
+
+  body{
+    background-size: contain;
+  }
+
   .card {
     width: 50rem;
+    height: 35rem;
   }
 
   .card__header {
-    display:grid;
+    display: grid;
     grid-template-areas:
       "card__header-pageviews card__header-price"
       "card__slider-container card__slider-container";
   }
-  .card__header > card__header-pageviews {
-    grid-area: "card__header-pageviews";
+  .card__header > .card__header-pageviews {
+    grid-area: card__header-pageviews;
   }
-  .card__header > card__header-price {
-    grid-area: "card__header-price";
+  .card__header > .card__header-price {
+    grid-area: card__header-price;
   }
-  .card__header > card__slider-container {
-    grid-area: "card__slider-container";
+  .card__header > .card__slider-container {
+    grid-area: card__slider-container;
+  }
+
+  .card__slider-container {
+    padding-bottom: 5rem;
+  }
+
+  .card__header-pageviews {
+    font-size: 20px;
+    color: var(--gray-blue);
+    letter-spacing: 0.1em;
+    padding-top: 2.5rem;
+    padding-left: 4rem;
+    text-align: left;
+  }
+
+  .card__header-price {
+    padding: 2.5rem;
+  }
+  .value {
+    display: inline-block;
+    color: var(--dark-blue);
+    font-size: 50px;
+    font-weight: 800;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .card__slider-container {
+    padding-bottom: 5rem;
+  }
+  .card__footer {
+    display: grid;
+    grid-template-areas: "card__footer--text card__footer--button";
+  }
+
+.card__toggle{
+  font-size: 20px;
+}
+
+.billing{
+  padding:1.5rem;
+}
+
+.discount {
+  display: inline-block;
+  color: var(--light-red);
+  background-color: var(--light-grayish-red);
+  font-size: 18px;
+  padding: 5px 13px;
+  width: 60px;
+  border-radius: 30px;
+}
+
+  .card__footer--text {
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 20px;
+  }
+.card__footer--button {
+  padding-top:3rem;
+}
+  .button {
+  font-size:18px;
+    padding: 20px 80px;
+    
   }
 }
+/* .month {
+    padding-bottom:rem;
+    display: inline-block;
+    color: var(--gray-blue);
+    font-size: 20px;
+  } */
