@@ -259,18 +259,19 @@ input:checked + .toggle:before {
     width: 50rem;
   }
 
-  .wrapper__bottom {
+  .card__header {
+    display:grid;
     grid-template-areas:
       "card__header-pageviews card__header-price"
       "card__slider-container card__slider-container";
   }
-  .wrapper__bottom > card__header-pageviews {
+  .card__header > card__header-pageviews {
     grid-area: "card__header-pageviews";
   }
-  .wrapper__bottom > card__header-price {
+  .card__header > card__header-price {
     grid-area: "card__header-price";
   }
-  .wrapper__bottom > card__slider-container {
+  .card__header > card__slider-container {
     grid-area: "card__slider-container";
   }
 }
