@@ -16,7 +16,6 @@
 
 html {
   box-sizing: border-box;
-  
 }
 *,
 *:before,
@@ -28,7 +27,7 @@ body {
   position: center;
   background-color: var(--white);
   background-image: url("/src/images/bg-pattern.svg");
-  background-size:auto;
+  background-size: auto;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -261,8 +260,7 @@ input:checked + .toggle:before {
 }
 
 @media only screen and (min-width: 1000px) {
-
-  body{
+  body {
     background-size: contain;
   }
 
@@ -289,6 +287,21 @@ input:checked + .toggle:before {
 
   .card__slider-container {
     padding-bottom: 5rem;
+  }
+
+
+
+  .wrapper__top--subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: lighter;
+    font-size: 17px;
+    color: var(--gray-blue);
+  }
+
+  .wrapper__top--sub {
+    font-size: 0;
   }
 
   .card__header-pageviews {
@@ -323,36 +336,35 @@ input:checked + .toggle:before {
     grid-template-areas: "card__footer--text card__footer--button";
   }
 
-.card__toggle{
-  font-size: 20px;
-}
+  .card__toggle {
+    font-size: 20px;
+  }
 
-.billing{
-  padding:1.5rem;
-}
+  .billing {
+    padding: 1.5rem;
+  }
 
-.discount {
-  display: inline-block;
-  color: var(--light-red);
-  background-color: var(--light-grayish-red);
-  font-size: 18px;
-  padding: 5px 13px;
-  width: 60px;
-  border-radius: 30px;
-}
+  .discount {
+    display: inline-block;
+    color: var(--light-red);
+    background-color: var(--light-grayish-red);
+    font-size: 18px;
+    padding: 5px 13px;
+    width: 60px;
+    border-radius: 30px;
+  }
 
   .card__footer--text {
     text-align: left;
     padding-left: 2rem;
     font-size: 20px;
   }
-.card__footer--button {
-  padding-top:3rem;
-}
+  .card__footer--button {
+    padding-top: 3rem;
+  }
   .button {
-  font-size:18px;
+    font-size: 18px;
     padding: 20px 80px;
-    
   }
 }
 /* .month {
