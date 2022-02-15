@@ -12,6 +12,8 @@
   --faint-blue-toggle: hsl(223, 50%, 87%);
   --gray-blue: rgb(133, 143, 173);
   --dark-blue: hsl(227, 35%, 25%);
+  --card-padding: 2rem;
+  --card-padding-desktop: 4rem;
 }
 
 html {
@@ -76,7 +78,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  width: 35rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -98,8 +99,9 @@ body {
 }
 
 .card__header {
-  padding: 4rem;
+  padding: var(--card-padding);
   text-align: center;
+  border-bottom: 1px solid var(--gray-blue);
 }
 
 .card__header__price {
@@ -192,6 +194,13 @@ body {
   transition: 0.4s;
 }
 
+.card__toggle {
+  font-size: 14px;
+  margin-left: calc(-1 * var(--card-padding));
+  margin-right: calc(-1 * var(--card-padding));
+}
+
+
 .toggle:before {
   position: absolute;
   content: "";
@@ -227,34 +236,54 @@ input:checked + .toggle:before {
   padding: 0.5rem;
 }
 
-.hr {
-  width: 80%;
-  display: block;
-  margin: auto;
-  border-top: var(--gray-blue);
-}
-
 .card__footer {
-  padding: 1.5rem;
+  padding: var(--card-padding);
+  text-align: center;
 }
 
 .check {
   color: var(--gray-blue);
 }
 
-.card__footer--button {
-  padding: 1.5rem;
+.benefits-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  color: var(--gray-blue);
+  font-size: 20px;
+}
+
+.benefits-list__item + .benefits-list__item {
+  margin-top: 1rem;
+}
+
+.benefits-list__item:before {
+  content: '';
+  display: inline-block;
+  margin-right: 1rem;
+  background-size: contain;
+  width: 1rem;
+  background-repeat: no-repeat;
+  background-image: url(/src/images/icon-check.svg);
+  aspect-ratio: 1;
+}
+
+.card__benefits-list {
+  margin-bottom: 3rem;
+}
+
+.card__footer__button {
+  margin-left: auto;
 }
 
 .button {
   background-color: var(--dark-blue);
   border: none;
   color: var(--pale-blue);
-  padding: 15px 65px;
+  padding: 1rem 4rem;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 2rem;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
 }
 
@@ -276,6 +305,7 @@ input:checked + .toggle:before {
   }
 
   .card__header {
+    padding: var(--card-padding-desktop);
     text-align: left;
   }
 
@@ -336,11 +366,20 @@ input:checked + .toggle:before {
     height: 4rem;
   }
 
-  .card__slider-container {
+  .card__benefits-list {
+    margin-bottom: 0;
   }
+
   .card__footer {
-    display: grid;
-    grid-template-areas: "card__footer--text card__footer--button";
+    padding: var(--card-padding-desktop);
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .benefits-list__item {
+    display: flex;
+    align-items: center;
   }
 
   .flex-center {
@@ -350,6 +389,8 @@ input:checked + .toggle:before {
 
   .card__toggle {
     font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .billing {
@@ -365,14 +406,6 @@ input:checked + .toggle:before {
     position: absolute;
   }
 
-  .card__footer--text {
-    text-align: left;
-    padding-left: 2rem;
-    font-size: 20px;
-  }
-  .card__footer--button {
-    padding-top: 3rem;
-  }
   .button {
     font-size: 18px;
     padding: 20px 80px;
